@@ -1,0 +1,20 @@
+a[href]:after {
+    content: none !important;
+}
+a,
+a:hover,
+a:focus {
+    text-decoration: none !important;
+}
+#content-wrap {
+    padding-top: 10px;
+}
+#ndq-content #views-exposed-form-widget-sec-filings-table {
+    display: none;
+}
+.content h1 {
+    margin-bottom: 10px;
+}
+.region-toolkits {
+    display: none;
+}

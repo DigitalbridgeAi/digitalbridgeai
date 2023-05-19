@@ -76,39 +76,39 @@
             </div>
             <div class="col-lg col-sm-6 mb-lg-0 mb-5">
                 <p>
-                    <a href="http://www.digitalbridge.com/public-shareholders" class="nav-title">Shareholders</a>
+                    <a href="{{ route('site.shareholders') }}" class="nav-title">Shareholders</a>
                 </p>
                 <ul class="sub-nav">
                     <li>
-                        <a href="https://ir.digitalbridge.com">Overview</a>
+                        <a href="{{ route('site.shareholders') }}">Overview</a>
                     </li>
                     <li>
-                        <a href="https://ir.digitalbridge.com/stock-information/stock-quote">Stock/Dividend
+                        <a href="{{ route('site.stock.information.annual-quote') }}">Stock/Dividend
                             Information</a>
                     </li>
                     <li>
-                        <a href="https://ir.digitalbridge.com/financial-information">Financial Information</a>
+                        <a href="{{ route('site.financials.information.quaterly-reports') }}">Financial Information</a>
+                    </li>
+                    {{-- <li>
+                        <a href="{{ route('site.sec-fillings') }}">SEC Filings</a>
+                    </li> --}}
+                    <li>
+                        <a href="{{ route('site.coperate-governance.highlights') }}">Corporate Governance</a>
+                    </li>
+                    {{-- <li>
+                        <a href="{{ route('site.news') }}">News</a>
                     </li>
                     <li>
-                        <a href="https://ir.digitalbridge.com/sec-filings">SEC Filings</a>
-                    </li>
+                        <a href="{{ route('site.events') }}">Events & Presentations</a>
+                    </li> --}}
                     <li>
-                        <a href="https://ir.digitalbridge.com/corporate-governance/highlights">Corporate Governance</a>
-                    </li>
-                    <li>
-                        <a href="https://ir.digitalbridge.com/news-releases">News</a>
-                    </li>
-                    <li>
-                        <a href="https://ir.digitalbridge.com/events">Events & Presentations</a>
-                    </li>
-                    <li>
-                        <a href="https://ir.digitalbridge.com/contact-us">Contact Us / Email Alerts</a>
+                        <a href="{{ route('site.contact.us') }}">Contact Us / Email Alerts</a>
                     </li>
                 </ul>
             </div>
             <div class="col-lg col-sm-6">
                 <p class="mb-5">
-                    <a href="{{route('site.news1')}}" class="nav-title">News</a>
+                    <a href="{{ route('site.news1') }}" class="nav-title">News</a>
                 </p>
                 <p class="mb-5">
                     <a href="docs/uk-tax-strategy-2022.pdf" target="_blank" class="nav-title">Tax Strategy</a>

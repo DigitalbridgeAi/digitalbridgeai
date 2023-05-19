@@ -84,30 +84,30 @@
                             class="nav-first">Shareholders</a>
                         <ul class="dropdown-menu second-level">
                             <li>
-                                <a href="https://ir.digitalbridge.com">Overview</a>
+                                <a href="{{ route('site.shareholders') }}">Overview</a>
                             </li>
+                        
                             <li>
-                                <a href="https://ir.digitalbridge.com/stock-information/stock-quote">Stock/Dividend
+                                <a href="{{ route('site.stock.information.annual-quote') }}">Stock/Dividend
                                     Information</a>
                             </li>
                             <li>
-                                <a href="https://ir.digitalbridge.com/financial-information">Financial Information</a>
+                                <a href="{{ route('site.financials.information.quaterly-reports') }}">Financial Information</a>
+                            </li>
+                            {{-- <li>
+                                <a href="{{ route('site.sec-fillings') }}">SEC Filings</a>
+                            </li> --}}
+                            <li>
+                                <a href="{{ route('site.coperate-governance.highlights') }}">Corporate Governance</a>
+                            </li>
+                            {{-- <li>
+                                <a href="{{ route('site.news.report') }}">News</a>
                             </li>
                             <li>
-                                <a href="https://ir.digitalbridge.com/sec-filings">SEC Filings</a>
-                            </li>
+                                <a href="{{ route('site.events') }}">Events & Presentations</a>
+                            </li> --}}
                             <li>
-                                <a href="https://ir.digitalbridge.com/corporate-governance/highlights">Corporate
-                                    Governance</a>
-                            </li>
-                            <li>
-                                <a href="https://ir.digitalbridge.com/news-releases">News</a>
-                            </li>
-                            <li>
-                                <a href="https://ir.digitalbridge.com/events">Events & Presentations</a>
-                            </li>
-                            <li>
-                                <a href="https://ir.digitalbridge.com/contact-us">Contact Us / Email Alerts</a>
+                                <a href="{{ route('site.contact.us') }}">Contact Us / Email Alerts</a>
                             </li>
                         </ul>
                     </li>
