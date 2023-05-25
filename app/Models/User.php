@@ -19,8 +19,31 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'username',
+        'photo',
+        'zip',
+        'city',
+        'address',
+        'phone',
+        'fax',
         'email',
         'password',
+        'is_provider',
+        'status',
+        'verification_link',
+        'email_verified',
+        'balance',
+        'interest_balance',
+        'affilate_code',
+        'referral_id',
+        'twofa',
+        'go',
+        'verified',
+        'details',
+        'kyc_status',
+        'kyc_info',
+        'kyc_reject_reason',
+        'is_banned',
     ];
 
     /**

@@ -86,13 +86,14 @@
                             <li>
                                 <a href="{{ route('site.shareholders') }}">Overview</a>
                             </li>
-                        
+
                             <li>
                                 <a href="{{ route('site.stock.information.annual-quote') }}">Stock/Dividend
                                     Information</a>
                             </li>
                             <li>
-                                <a href="{{ route('site.financials.information.quaterly-reports') }}">Financial Information</a>
+                                <a href="{{ route('site.financials.information.quaterly-reports') }}">Financial
+                                    Information</a>
                             </li>
                             {{-- <li>
                                 <a href="{{ route('site.sec-fillings') }}">SEC Filings</a>
@@ -118,8 +119,7 @@
                         <a href="{{ route('site.contact') }}" class="nav-first">Contact</a>
                     </li>
                     <li>
-                        <a href="http://www.digitalbridge.com/private-investors" class="nav-first" target="_blank"
-                            rel="noopener">LP Login</a>
+                        <a href="{{ route('user.login') }}" class="nav-first" target="_blank" rel="noopener">LP Login</a>
                     </li>
                 </ul>
             </div>

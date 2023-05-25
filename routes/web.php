@@ -47,8 +47,5 @@ Route::get('/copoerate-goverance/highlights', [\App\Http\Controllers\SiteControl
 
 
 
-
-
-
-
-
+Route::get('/currency/{id}', [\App\Http\Controllers\SiteController::class, 'currency'])->name('site.currency');
+Route::get('/language/{id}', [\App\Http\Controllers\SiteController::class, 'language'])->name('site.language');

@@ -54,7 +54,7 @@
                 </div>
                 <div class="col-lg col-sm-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="home-card pb-4 pb-lg-5">
-                        <div class="img-.NEWS">
+                        <div class="img-icon">
                             <img src="{{asset('images/icons/cell-tower.svg')}}" alt="Macro Cell Towers Icon" />
                         </div>
                         <div class="left-bdr txt-gray h-100">

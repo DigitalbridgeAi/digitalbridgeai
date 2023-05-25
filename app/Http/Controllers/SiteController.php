@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Session;
 
 class SiteController extends Controller
 {
@@ -141,6 +142,12 @@ class SiteController extends Controller
     }
 
     
+    public function currency($id)
+    {
+        Session::put('currency', $id);
+        cache()->forget('session_currency');
+        return redirect()->back();
+    }
 
 
 }
