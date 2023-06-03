@@ -21,6 +21,8 @@ class RouteServiceProvider extends ServiceProvider
 
     // protected namespace
     protected $namespace = 'App\Http\Controllers';
+    protected $gatewayNamespace = 'App\Http\Controllers\Gateway';
+
 
     /**
      * Define your route model bindings, pattern filters, and other route configuration.
@@ -40,6 +42,12 @@ class RouteServiceProvider extends ServiceProvider
             Route::middleware('web')
                 ->namespace($this->namespace)
                 ->group(base_path('routes/web.php'));
+                
+            Route::middleware('web')
+                ->namespace($this->gatewayNamespace)
+                ->prefix('ipn')
+                ->name('ipn.')
+                ->group(base_path('routes/ipn.php'));
             
             Route::middleware('web')
                 ->namespace($this->namespace)

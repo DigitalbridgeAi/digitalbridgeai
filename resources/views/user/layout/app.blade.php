@@ -8,16 +8,18 @@
 
     <title>
         @yield('title') |
-        {{ config('app.name', 'Laravel') }}
+        {{ config('app.name', 'DigitalBridge') }}
     </title>
     <link rel="stylesheet" href="{{ asset('assets/front/css/bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/front/css/animate.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/front/css/all.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/front/css/line-awesome.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/front/css/lightbox.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/front/css/odometer.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/front/css/owl.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/front/css/main.css') }}" />
-    {{-- <link rel="stylesheet" href="{{asset('assets/front/css/toastr.min.css')}}"> --}}
+    <link rel="stylesheet" href="{{ asset('assets/front/css/custom.css') }}" />
+    <link rel="stylesheet" href="{{asset('assets/front/css/toastr.min.css')}}">
 
 </head>
 
@@ -57,14 +59,14 @@
     <script src="{{ asset('assets/front/js/owl.min.js') }}"></script>
     <script src="{{ asset('assets/front/js/notify.js') }}"></script>
     <script src="{{ asset('assets/front/js/main.js') }}"></script>
-    {{-- <script src="{{asset('assets/front/js/toastr.min.js')}}"></script> --}}
+    <script src="{{asset('assets/front/js/toastr.min.js')}}"></script>
     <script src="{{ asset('assets/front/js/custom.js') }}"></script>
 
 
-    @include('layouts.notify')
+    {{-- @include('layouts.notify') --}}
     @stack('js')
 
-    {{-- <script>
+    <script>
 		'use strict';
 	
 		@if (Session::has('message'))
@@ -102,7 +104,7 @@
 		}
 			toastr.warning("{{ session('warning') }}");
 		@endif
-	</script> --}}
+	</script>
 
 
 </body>

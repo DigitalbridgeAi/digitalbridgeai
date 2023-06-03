@@ -96,10 +96,9 @@
                     </div>
                 </div>
             </div>
-{{-- 
             <div class="dashboard--width">
                 <div class="dashboard-card h-100">
-
+                    
                     <div class="dashboard-card__header">
                         <div class="dashboard-card__header__icon">
                             <img src="{{ asset('assets/images/deposit.png') }}" alt="wallet">
@@ -111,6 +110,7 @@
                     </div>
                 </div>
             </div>
+            {{-- 
 
             <div class="dashboard--width">
                 <div class="dashboard-card h-100">

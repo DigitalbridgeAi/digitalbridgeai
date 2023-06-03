@@ -73,7 +73,7 @@
                 <li>
                     <a href="{{ route('user.deposit.create') }}" class="{{ request()->routeIs('user.deposit.create') ? 'active' : ''}}">
                         <span class="icon"><i class="fas fa-business-time"></i></span>
-                        @lang('Create Deposit')
+                        @lang('Add Deposit')
                     </a>
                 </li>
                 <li>

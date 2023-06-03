@@ -110,7 +110,7 @@ h5,
 h6 {
     margin: 0;
     line-height: 1.2;
-    color: var(--title-clr);
+    /* color: var(--title-clr); */
     font-family: var(--heading-fonts);
     font-weight: 500;
 }
@@ -2914,8 +2914,8 @@ section[class*="border"] {
 
 /*Faqs Section*/
 .accordion-item {
-    border: 1px solid var(--border-clr);
-    background: var(--section-bg);
+    border: 1px solid var(--border-clr) !important;
+    background: var(--section-bg) !important;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;

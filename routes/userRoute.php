@@ -42,11 +42,11 @@ Route::prefix('user')->group(function() {
     Route::get('/otp', [OTPController::class,'showotpForm'])->name('user.otp');
     Route::post('/otp', [OTPController::class,'otp'])->name('user.otp.submit');
   
-    Route::get('/register', [RegisterController::class,'showRegisterForm'])->name('user.register');
+    Route::get('/register', [RegisterController::class,'showRegistrationForm'])->name('user.register');
     Route::post('/register', [RegisterController::class,'register'])->name('user.register.submit');
     Route::get('/register/verify/{token}', [RegisterController::class,'token'])->name('user.register.token');  
   
-    Route::group(['middleware' => ['otp','banuser']],function () {
+    Route::group(['middleware' => ['otp','banuser', 'auth']],function () {
   
       Route::get('/dashboard', [UserController::class,'index'])->name('user.dashboard');
       Route::get('/username/{number}', [UserController::class,'username'])->name('user.username');
@@ -102,6 +102,13 @@ Route::prefix('user')->group(function() {
         Route::get('/referral-commissions',[ReferralController::class,'commissions'])->name('user.referral.commissions');
       });
   
+      Route::prefix('deposit')->name('user.deposit.')->controller('Gateway\PaymentController')->group(function () {
+        Route::any('/', 'deposit')->name('history');
+        Route::post('insert', 'depositInsert')->name('insert');
+        Route::get('confirm', 'depositConfirm')->name('confirm');
+        Route::get('manual', 'manualDepositConfirm')->name('manual.confirm');
+        Route::post('manual', 'manualDepositUpdate')->name('manual.update');
+    });
   
       Route::get('/package',[PricingPlanController::class,'index'])->name('user.package.index');
       Route::get('/package/subscription/{id}',[PricingPlanController::class,'subscription'])->name('user.package.subscription');

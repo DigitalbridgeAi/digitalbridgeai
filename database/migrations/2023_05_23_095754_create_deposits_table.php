@@ -11,18 +11,22 @@ return new class extends Migration
      */
     public function up(): void
     {
-   
-
         Schema::create('deposits', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('user_id')->nullable();
-            $table->string('amount')->nullable();
-            $table->string('deposit_number')->nullable();
-            $table->string('currency_id')->nullable();
-            $table->string('txnid')->nullable();
-            $table->string('method')->nullable();
-            $table->string('charge_id')->nullable();
-            $table->enum('status', ['Yes', 'No'])->default('No');
+            $table->bigInteger('method_code')->nullable();
+            $table->decimal('amount', 28, 8)->default(0.00000000);
+            $table->string('method_currency')->nullable();
+            $table->decimal('charge', 28, 8)->default(0.00000000);
+            $table->decimal('rate', 28, 8)->default(0.00000000);
+            $table->decimal('final_amo', 28, 8)->default(0.00000000);
+            $table->string('btc_amo')->nullable();
+            $table->string('btc_wallet')->nullable();
+            $table->string('trx')->nullable();
+            $table->integer('try')->default(0);
+            $table->tinyInteger('status')->default(0)->comment('1=>success, 2=>pending, 3=>cancel');
+            $table->tinyInteger('from_api')->default(0);
+            $table->string('admin_feedback')->nullable();
             $table->timestamps();
         });
     }

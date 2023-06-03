@@ -8,7 +8,7 @@
 
     <title>
         @yield('title') |
-        {{ config('app.name', 'Laravel') }}
+        {{ config('app.name', 'DigitalBridge') }}
     </title>
 
     <link rel="stylesheet" href="{{asset('assets/front/css/bootstrap.min.css')}}" />

@@ -28,6 +28,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         view()->composer('*', function($settings) {
+            $settings->with('defaultCurrency', Session::get('currency') ?  DB::table('currencies')->where('id','=',Session::get('currency'))->first() : DB::table('currencies')->where('is_default','=',1)->first());
+
             // $settings->with('seo', DB::table('seotools')->first());
             $settings->with('gs', DB::table('general_settings')->first());
 
