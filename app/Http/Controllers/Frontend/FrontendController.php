@@ -559,7 +559,7 @@ class FrontendController extends Controller
     }
     public function createPages(Request $request)
     {
-        $ps = new Pagesetting();
+        $ps = new Generalsetting();
         $ps->hero_title = 'Welcome to my website';
         $ps-> hero_subtitle = 'My subtitle';
         $ps->hero_photo = 'assets/images/hero.jpg';
