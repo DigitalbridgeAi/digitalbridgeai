@@ -8,19 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class BalanceTransfer extends Model
 {
     use HasFactory;
-
     protected $fillable = [
         'user_id',
+        'receiver_id',
+        'transaction_no',
+        'cost',
         'amount',
-        'charge',
-        'to',
-        'from',
-        'status',
-        'details',
+        'final_amount',
+        'status'
     ];
 
-    public function user()
-    {
-        return $this->belongsTo(User::class);
+    public function user(){
+        return $this->belongsTo(User::class)->withDefault();
     }
+
 }
