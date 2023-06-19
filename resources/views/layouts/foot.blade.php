@@ -1,4 +1,4 @@
-@vite('resources/js/app.js')
+{{-- @vite('resources/js/app.js') --}}
 <div class="cookie-notice-container accepted" id="cookie-notice">
     <div class="cookie-notice">
         <div class="d-flex">

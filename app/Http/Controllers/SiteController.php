@@ -2,16 +2,27 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pagesetting;
 use Illuminate\Http\Request;
 use Session;
 
 class SiteController extends Controller
 {
     
-    public function index()
+    public function index(Request $request)
     {
-        return view('frontend.home');
+        $ps = new Pagesetting();
+        $ps->hero_title = 'Welcome to my website';
+        $ps-> hero_subtitle = 'My subtitle';
+        $ps->hero_photo = 'assets/images/hero.jpg';
+
+        return view('frontend.index', compact('ps'));
+       // return view('frontend.index');
+
+        
+        $ps->save();
     }
+
 
     public function about()
     {
@@ -148,6 +159,14 @@ class SiteController extends Controller
         cache()->forget('session_currency');
         return redirect()->back();
     }
+
+    public function showPage($id) 
+    {
+        $ps = Pagesetting::first($id);
+        return view('frontend.index', compact('ps'));
+    }
+
+    
 
 
 }

@@ -50,7 +50,7 @@ Route::prefix('user')->group(function() {
   
       Route::get('/dashboard', [UserController::class,'index'])->name('user.dashboard');
       Route::get('/username/{number}', [UserController::class,'username'])->name('user.username');
-      Route::get('/transactions', [UserController::class,'transaction'])->name('user.transaction'); 
+      Route::get('/transactions', [UserController::class,'transactions'])->name('user.transaction'); 
   
       Route::get('/2fa-security', [UserController::class,'showTwoFactorForm'])->name('user.show2faForm');
       Route::post('/createTwoFactor', [UserController::class,'createTwoFactor'])->name('user.createTwoFactor');
